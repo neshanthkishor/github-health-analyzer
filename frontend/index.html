@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Health Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>GitHub Repository Health Analyzer</h1>
+        <p class="subtitle">
+            Analyze the health and activity of any public GitHub repository.
+        </p>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="repoUrl"
+                placeholder="https://github.com/user/repository"
+            >
+            <button onclick="analyzeRepository()">Analyze</button>
+        </div>
+
+        <p id="error"></p>
+
+        <div id="result" class="hidden">
+
+            <div class="score-card">
+                <h2>Repository Health Score</h2>
+                <div id="score">--</div>
+                <p>/ 100</p>
+            </div>
+
+            <div class="repo-info">
+                <h2 id="repoName"></h2>
+                <p id="description"></p>
+
+                <div class="stats">
+                    <div>
+                        <strong id="stars">0</strong>
+                        <span>Stars</span>
+                    </div>
+
+                    <div>
+                        <strong id="forks">0</strong>
+                        <span>Forks</span>
+                    </div>
+
+                    <div>
+                        <strong id="issues">0</strong>
+                        <span>Open Issues</span>
+                    </div>
+
+                    <div>
+                        <strong id="language">-</strong>
+                        <span>Language</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis">
+
+                <h2>Repository Analysis</h2>
+
+                <div class="bar">
+                    <span>Activity</span>
+                    <div>
+                        <div id="activityBar"></div>
+                    </div>
+                    <b id="activity">0</b>
+                </div>
+
+                <div class="bar">
+                    <span>Community</span>
+                    <div>
+                        <div id="communityBar"></div>
+                    </div>
+                    <b id="community">0</b>
+                </div>
+
+                <div class="bar">
+                    <span>Documentation</span>
+                    <div>
+                        <div id="documentationBar"></div>
+                    </div>
+                    <b id="documentation">0</b>
+                </div>
+
+                <div class="bar">
+                    <span>Issue Management</span>
+                    <div>
+                        <div id="issueBar"></div>
+                    </div>
+                    <b id="issue">0</b>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

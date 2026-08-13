@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #24292f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#error {
+    color: red;
+    text-align: center;
+    margin: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.score-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.score-card h2 {
+    margin-bottom: 10px;
+}
+
+#score {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.repo-info,
+.analysis {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+#description {
+    margin: 10px 0 20px;
+    color: #6b7280;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stats div {
+    background: #f4f7fb;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.stats strong {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.stats span {
+    color: #6b7280;
+}
+
+.bar {
+    display: grid;
+    grid-template-columns: 150px 1fr 50px;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.bar > div {
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar > div > div {
+    height: 100%;
+    width: 0%;
+    background: #24292f;
+    transition: width 0.5s;
+}
+
+@media (max-width: 700px) {
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bar {
+        grid-template-columns: 100px 1fr 40px;
+    }
+}
